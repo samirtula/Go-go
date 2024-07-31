@@ -19,7 +19,26 @@ func main() {
 
 	engToRus := map[string]string{"hello": "привет", "world": "мир"}
 	fmt.Println(engToRus)
-	//удаление элемента
+	// удаление элемента
 	delete(engToRus, "world")
 	fmt.Println(engToRus)
+
+	// обход map
+	idToName := map[int64]string{1: "Alex", 2: "Bob", 3: "Chris"}
+
+	for id, name := range idToName {
+		fmt.Println("id: ", id, "name: ", name)
+	}
+
+	numExistence := make(map[int]bool)
+
+	// порядок ключей в мапе рандомизирован
+	for i := 0; i < 10; i++ {
+		numExistence[i] = true
+	}
+
+	//8 1 2 3 6 7 9 ...
+	for num := range numExistence {
+		fmt.Println(num)
+	}
 }
