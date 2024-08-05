@@ -1,8 +1,8 @@
 package main
 
 import (
-	"fmt"
 	"errors"
+	"fmt"
 )
 
 var num int = 11
@@ -18,12 +18,11 @@ func main() {
 	vars()
 }
 
-
-func vars()  {
+func vars() {
 	var (
-		a string
-		b bool
-		c int
+		a            string
+		b            bool
+		c            int
 		errCannotSum = errors.New("cannot sum")
 	)
 
